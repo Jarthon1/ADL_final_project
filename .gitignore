@@ -1,3 +1,7 @@
-./FCSTGNN/FC_STGNN/data/ISRUC_S3.npz
-./FCSTGNN/FC_STGNN/data/ISRUC_S3.h5
-./deep-sleep-pytorch/data
+FCSTGNN/FC_STGNN/data/ISRUC_S3.npz
+FCSTGNN/FC_STGNN/data/ISRUC_S3.h5
+deep-sleep-pytorch/data
+FCSTGNN/FC_STGNN/wandb
+FCSTGNN/FC_STGNN/__pycache__
+.git/objects/pack/tmp_pack_swrcod
+.git/objects/pack/tmp_pack_9z6vFV
