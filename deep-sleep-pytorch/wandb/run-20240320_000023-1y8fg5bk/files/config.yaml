@@ -1,0 +1,111 @@
+wandb_version: 1
+
+_wandb:
+  desc: null
+  value:
+    python_version: 3.7.3
+    cli_version: 0.16.4
+    framework: torch
+    is_jupyter_run: false
+    is_kaggle_kernel: false
+    start_time: 1710892823.0
+    t:
+      1:
+      - 1
+      - 5
+      - 41
+      - 55
+      2:
+      - 1
+      - 5
+      - 41
+      - 53
+      - 55
+      3:
+      - 1
+      - 23
+      4: 3.7.3
+      5: 0.16.4
+      8:
+      - 5
+      13: linux-x86_64
+data_loader:
+  desc: null
+  value:
+    batch_size:
+      eval: 256
+      test: 256
+      train: 256
+    data:
+      train:
+      - - isruc
+        - train
+      eval:
+      - - isruc
+        - eval
+      test:
+      - - isruc
+        - test
+    data_dir: ./data/processed_oak
+    import: src.data_loader.dataset.MultiCohortDataset
+    modalities:
+    - eeg
+    - eog
+    - emg
+    num_classes: 5
+    segment_length: 300
+    train_fraction: null
+exp:
+  desc: null
+  value:
+    name: baseline_inference
+loss:
+  desc: null
+  value:
+    import: src.model.losses.temporal_crossentropy_loss
+lr_scheduler:
+  desc: null
+  value:
+    args:
+      base_lr: 0.1
+      max_lr: 0.5
+      mode: triangular
+      step_size_up: 500
+    import: torch.optim.lr_scheduler.CyclicLR
+metrics:
+  desc: null
+  value:
+  - overall_accuracy
+  - balanced_accuracy
+  - kappa
+network:
+  desc: null
+  value:
+    filter_base: 4
+    import: src.model.rnn_model.RnnModel
+    kernel_size: 3
+    max_pooling: 2
+    num_blocks: 7
+    rnn_bidirectional: true
+    rnn_num_layers: 1
+    rnn_num_units: 1024
+optimizer:
+  desc: null
+  value:
+    args:
+      lr: 0.1
+      momentum: 0.9
+      nesterov: true
+    import: torch.optim.SGD
+trainer:
+  desc: null
+  value:
+    epochs: 20
+    log_dir: experiments/baseline_inference
+    monitor: min val_loss
+    n_gpu: 1
+    num_workers: 8
+    save_dir: experiments
+    save_freq: 1
+    tensorboardX: false
+    verbosity: 2

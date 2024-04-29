@@ -1,0 +1,63 @@
+{
+    "os": "Linux-6.5.0-1014-aws-x86_64-with-debian-bookworm-sid",
+    "python": "3.7.3",
+    "heartbeatAt": "2024-03-18T22:37:00.964555",
+    "startedAt": "2024-03-18T22:37:00.458233",
+    "docker": null,
+    "cuda": null,
+    "args": [
+        "-c",
+        "config.yaml"
+    ],
+    "state": "running",
+    "program": "train.py",
+    "codePathLocal": "train.py",
+    "codePath": "train.py",
+    "git": {
+        "remote": "https://github.com/neergaard/deep-sleep-pytorch",
+        "commit": "db5d6f59369baacabeac956201c3c6de09961945"
+    },
+    "email": null,
+    "root": "/home/ubuntu/deep-sleep-pytorch",
+    "host": "ip-172-31-33-205",
+    "username": "ubuntu",
+    "executable": "/home/ubuntu/anaconda3/envs/dspth/bin/python",
+    "cpu_count": 2,
+    "cpu_count_logical": 4,
+    "cpu_freq": {
+        "current": 2500.004,
+        "min": 0.0,
+        "max": 0.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 2500.004,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2500.004,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2500.004,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2500.004,
+            "min": 0.0,
+            "max": 0.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 61.84368133544922,
+            "used": 36.8370475769043
+        }
+    },
+    "memory": {
+        "total": 15.40926742553711
+    }
+}

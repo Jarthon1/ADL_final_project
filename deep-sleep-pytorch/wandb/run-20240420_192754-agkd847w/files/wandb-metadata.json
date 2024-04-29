@@ -1,0 +1,71 @@
+{
+    "os": "Linux-6.5.0-1014-aws-x86_64-with-debian-bookworm-sid",
+    "python": "3.7.3",
+    "heartbeatAt": "2024-04-20T19:27:55.002820",
+    "startedAt": "2024-04-20T19:27:54.619955",
+    "docker": null,
+    "cuda": null,
+    "args": [
+        "--config",
+        "config.yaml"
+    ],
+    "state": "running",
+    "program": "train.py",
+    "codePathLocal": "train.py",
+    "codePath": "train.py",
+    "git": {
+        "remote": "https://github.com/neergaard/deep-sleep-pytorch",
+        "commit": "db5d6f59369baacabeac956201c3c6de09961945"
+    },
+    "email": null,
+    "root": "/home/ubuntu/deep-sleep-pytorch",
+    "host": "ip-172-31-27-171",
+    "username": "ubuntu",
+    "executable": "/home/ubuntu/anaconda3/envs/dspth/bin/python",
+    "cpu_count": 2,
+    "cpu_count_logical": 4,
+    "cpu_freq": {
+        "current": 3100.1425,
+        "min": 0.0,
+        "max": 0.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 3099.535,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3100.607,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3100.252,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3100.176,
+            "min": 0.0,
+            "max": 0.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 96.73210144042969,
+            "used": 59.83327102661133
+        }
+    },
+    "gpu": "Tesla T4",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "Tesla T4",
+            "memory_total": 16106127360
+        }
+    ],
+    "memory": {
+        "total": 15.409278869628906
+    }
+}

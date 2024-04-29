@@ -1,0 +1,122 @@
+wandb_version: 1
+
+_wandb:
+  desc: null
+  value:
+    python_version: 3.7.3
+    cli_version: 0.16.4
+    framework: torch
+    is_jupyter_run: false
+    is_kaggle_kernel: false
+    start_time: 1713636301.0
+    t:
+      1:
+      - 1
+      - 5
+      - 41
+      - 55
+      2:
+      - 1
+      - 5
+      - 41
+      - 53
+      - 55
+      3:
+      - 1
+      - 23
+      4: 3.7.3
+      5: 0.16.4
+      8:
+      - 5
+      13: linux-x86_64
+data_loader:
+  desc: null
+  value:
+    batch_size:
+      eval: 32
+      test: 32
+      train: 32
+    data:
+      train:
+      - - isruc
+        - train
+      eval:
+      - - isruc
+        - eval
+      test:
+      - - isruc
+        - test
+    data_dir: ./data/processed_oak
+    import: src.data_loader.dataset.MultiCohortDataset
+    modalities:
+    - eeg
+    - eog
+    - emg
+    num_classes: 5
+    segment_length: 300
+    train_fraction: null
+exp:
+  desc: null
+  value:
+    name: baseline_inference
+loss:
+  desc: null
+  value:
+    import: src.model.losses.temporal_crossentropy_loss
+lr_scheduler:
+  desc: null
+  value:
+    args:
+      base_lr: 0.1
+      max_lr: 0.5
+      mode: triangular
+      step_size_up: 500
+    import: torch.optim.lr_scheduler.CyclicLR
+metrics:
+  desc: null
+  value:
+  - overall_accuracy
+  - balanced_accuracy
+  - kappa
+network:
+  desc: null
+  value:
+    import: src.model.fc-stgnn_model.FC_STGNN_SSC
+    Conv_out: 12
+    lstmhidden_dim: 24
+    lstmout_dim: 24
+    conv_kernel: 5
+    hidden_dim: 16
+    time_length: 4
+    num_node: 10
+    num_windows: 5
+    moving_window:
+    - 2
+    - 2
+    stride:
+    - 1
+    - 2
+    decay: 0.8
+    pooling_choice: mean
+    n_class: 5
+    dropout: 0.4
+optimizer:
+  desc: null
+  value:
+    args:
+      lr: 0.1
+      momentum: 0.9
+      nesterov: true
+    import: torch.optim.SGD
+trainer:
+  desc: null
+  value:
+    epochs: 20
+    log_dir: experiments/baseline_inference
+    monitor: min val_loss
+    n_gpu: 1
+    num_workers: 8
+    save_dir: experiments
+    save_freq: 1
+    tensorboardX: false
+    verbosity: 2
